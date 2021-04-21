@@ -1,0 +1,15 @@
+{% extends 'time_entry/basic.html' %}
+{% block title %} list{% endblock %}
+{% block content %}
+    <div class="col-8">
+        <h4 class="text-center alert alert-info mt-4">Task </h4>
+        <table class="table table-hover bg-powderblue">
+            <tbody>
+            {% for task in taskmodel_list %}
+                <tr>
+                    <td class="text-center"><a href="{% url 'detail' task.id %}">{{ task.task_name }}</a></td>
+                </tr>{% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'time_entry/basic.html' %}
+{% block title %} list{% endblock %}
+{% block content %}
+    <div class="col-8">
+        <h4 class="text-center alert alert-info mt-4">Task Information </h4>
+
+        <table class="table table-hover bg-powderblue">
+            <thead>
+            <tr class="text-center">
+                <th scope="col" style="width: 23%">Task</th>
+                <th scope="col" style="width: 23%">Project</th>
+                <th scope="col" style="width: 25%">Start Time</th>
+                <th scope="col" style="width: 25%">End Time</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="text-center">{{ taskmodel.task_name }} </td>
+                <td class="text-center">{{ taskmodel.project }} </td>
+                <td class="text-center">{{ taskmodel.start_time }} </td>
+                <td class="text-center">{{ taskmodel.end_time }} </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
