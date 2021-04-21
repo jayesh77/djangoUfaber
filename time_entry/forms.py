@@ -4,7 +4,7 @@ from django import forms
 from django.core.exceptions import ValidationError
 from django.utils.translation import gettext, gettext_lazy as _
 
-
+#does not used UserCreation form because i had done many changes.
 class UserForm(forms.ModelForm):
     error_messages = {
         'password_mismatch': _('The two password fields didn’t match.'),
